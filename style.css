@@ -1,0 +1,567 @@
+/*
+Theme Name: DesignMyBlog
+Theme URI: https://google.ro
+Author: Mihaela MAXIM
+Author URI: https://www.facebook.com/mihaela.maxim20
+Description: Lorepm ipsum ...
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: designmyblog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+html, 
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+.full-container {
+	margin: 0 auto;
+	padding: 0 0 100px 0;
+	width: 1062px;
+}
+.container {
+	margin: 0 auto;
+	padding: 0;
+	width: 1062px;
+}
+
+@media screen and (max-width:768px) {
+	.container {
+		width: 100%;
+		margin: 0 15px;
+	}
+
+	/*body {
+		overflow-x: hidden;
+	}*/
+}
+
+.title-post {
+	font-family: 'Playfair Display';
+	font-size: 30px;
+	color: #626262;
+	padding: 25px 0 35px 0px;
+}
+
+.category {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.title-post a,
+.title-post a:hover {
+	color: #626262;
+	text-decoration: none;
+}
+
+.post-categories {
+	padding-top: 30px;
+}
+
+.category ul li a {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #b4ad9e;
+	text-decoration: none;
+}
+
+.post p {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	color: #7d7d7d;
+	text-align: left;
+	line-height: 1.714;
+}
+
+.single-post p {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	color: #626262;
+	padding: 0;
+	text-align: left;
+	line-height: 1.714;
+}
+
+.single-post p strong {
+	font-weight: bold;
+}
+
+.single-post img {
+	max-width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image {
+	text-align: center;
+} 
+
+.image img {
+	width: 100%;
+	height: auto;
+	padding-bottom: 70px;
+}
+
+.pagina {
+	width: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.newsletter {
+	position: relative;
+	height: 287px;
+	background-color: #f0f0f0;
+	margin: 0 0 50px 0;
+	width: 100%;
+}
+
+.newsletter:before,
+.newsletter:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 290px;
+	background-color: #f0f0f0;
+}
+
+.newsletter:before {
+	left: -100%;
+}
+
+.newsletter:after {
+	right: -100%;
+}
+
+
+.newsletter p {
+	color: #333333;
+	text-align: center;
+	padding: 73px 0 50px 0;
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 400px;
+}
+
+
+.enter-email {
+  text-align: center;
+}
+
+input[type=text] {
+  width: 370px;
+  padding: 10px;
+  margin: 0 auto;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid #000000;
+  background-color: #f0f0f0;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #626262;
+}
+
+input[type=submit-news] {
+	background-image: url('send_icon.png');
+	background-repeat: no-repeat;
+	border: none;
+	text-indent: -9999px;
+	width: 33px;
+	cursor: pointer;
+	background-color: #f0f0f0;
+}
+
+
+.post-wrapper {
+	overflow-x: hidden;
+}
+
+.post-wrapper .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-item:not(.post-item-first):nth-child(even) {
+	flex: 0 0 calc(50% - 110px);
+	margin: 0 30px 0 80px;
+}
+
+.post-item:not(.post-item-first):nth-child(odd) {
+	flex: 0 0 calc(50% - 110px);
+	margin: 0 80px 0 30px;
+}
+
+.post-aside {
+	display: flex;
+}
+
+.principal-post {
+	width: 60%;
+	padding-left: 80px;
+	padding-right: 50px;
+}
+
+.sidebar {
+	width: 40%;
+	padding-top: 65px;
+}
+
+.widget_text {
+	font-family: 'Playfair Display', serif;
+	color: #888888;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.textwidget p {
+	line-height: 25px;
+	color: #616161;
+}
+
+.widget_text h3 {
+	font-size: 25px;
+	margin: 30px 0 20px 0;
+	color: #656565;
+	font-family: 'Playfair Display', serif;
+}
+
+.widget_custom_html {
+	margin-bottom: 73px;
+}
+
+.widget-title {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #b4ad9e;
+	margin-bottom: 35px;
+}
+
+.widget_recent_entries {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	margin-bottom: 20px;
+
+}
+
+.btn_loadmore {
+	position: relative;
+	width: 165px;
+	height: 65px;
+	background-color: white;
+	border: 1px solid #626262;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	color: #707070;
+	left: 42%;
+	text-decoration: none;
+	padding: 20px 30px;
+	margin: 160 0 1235px 0;
+}
+
+
+.widget_recent_entries,
+.widget_recent_entries a,
+#recent-posts-2,
+#recent-posts-2 a:hover {
+	color: #626262;
+	text-decoration: none;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+
+.widget_recent_entries ul li {
+	list-style: disc;
+	color: #b4ad9e;
+	margin-bottom: 50px;
+}
+
+.comment-reply-title {
+	font-family: 'Playfair Display';
+	font-size: 20px;
+	color: #b6b5a3;
+	padding-bottom: 10px;
+}
+
+#email-notes, 
+.comment-notes {
+	font-family: 'Playfair Display';
+	font-size: 16px;
+	color: #626262;
+	padding: 10px 0 10px 0;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-cookies-consent {
+	font-family: 'Playfair Display';
+	font-size: 16px;
+	color: #626262;
+	padding: 15px 0 15px 0;
+}
+
+#author,
+#email,
+#url {
+	border: 1px solid #c8c8c8;
+	border-radius: 5px;
+	background-color: white;
+}
+
+#submit {
+	width: 150px;
+	height: 45px;
+	background-color: white;
+	border: 1px solid #c8c8c8;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	color: #b4b39f;
+}
+
+.form-submit {
+	padding: 10px 50px 0 0;
+	margin-left: 110px;
+}
+
+.comments-title {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #b4b39f;
+	padding: 0 0 20px 0;
+}
+
+.photo {
+	width: 75px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.fn {
+	font-family: 'Playfair Display', serif;
+	font-size: 18px;
+	color: #636363;
+	font-weight: 700;
+}
+
+.comment-author {
+	margin-bottom: 13px;
+}
+
+.comment-list li {
+	position: relative;
+	margin-bottom: 55px;
+}
+
+.comment-body {
+	margin-left: 110px;
+}
+
+.comment-form-comment label {
+	display: none;
+}
+
+.comment-form-comment textarea {
+	padding: 35px;
+	width: 790px;
+	height: 25px;
+	border: 1px solid #c8c8c8;
+	border-radius: 5px;
+	font-family: 'Playfair Display';
+	font-size: 16px;
+	color: #626262;
+}
+
+.comment-body p {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	color: #616161;
+}
+
+.reply {
+	text-transform: uppercase;
+	margin-top: 25px;
+}
+
+.comment-author .photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.comment-respond form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reply a{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #aeae96;
+	text-decoration: none;
+}
+
+.comment-awaiting-moderation {
+	font-family: 'Playfair Display', serif;
+	font-size: 18px;
+	color: #aeae96;
+	text-decoration: none;
+	padding: 20px 0 20px 0;
+}
+
+.logged-in-as,
+.logged-in-as a {
+	font-family: 'Playfair Display', serif;
+	font-size: 18px;
+	color: #23282d;
+	text-decoration: none;
+	padding: 20px 0 20px 0;
+}
+
+.widget_top-posts {
+	width: 100%;
+}
+
+.says,
+.commentmetadata {
+	display: none;
+}
+
+.rpwwt-widget a,
+.rpwwt-widget a:hover {
+	color: #626262;
+	text-decoration: none;
+	margin-bottom: 50px;
+	font-size: 14px;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px !important;
+	line-height: 25px;
+}
+
+.rpwwt-widget {
+	padding-bottom: 55px;
+}
+
+.rpwwt-widget ul {
+	list-style: disc !important;
+	color: #b4ad9e;
+}
+
+.rpwwt-post-comments-number {
+	padding: 15px 0 15px 0;
+	text-transform: uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+}
+
+.custom-html-widget .fab {
+	color: #b4ad9e;
+	margin: 0 20px 0 0;
+	font-size: 18px;
+}
+
+.logged-in-as {
+	width: 110px;
+}
+
+.comment-form-comment {
+	width: calc(100% - 110px);
+}
+
+.leave-comment,
+.leave-comment a:hover {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: #b4ad9e;
+	padding: 55px 0 0 0;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.item-title,
+.media-center,
+.headline,
+.listicle-item-content,
+.padded {
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+	color: #626262;
+	padding: 0 0 30px 0;
+	text-align: left;
+	line-height: 1.714;
+}
+
+.post-item {
+	padding-bottom: 130px;
+}
+
+.wp_image-105 {
+	width: 250px;
+}
+
+.share {
+  	display: flex;
+  	align-items: center;
+  	padding: 75px 0 115px 0px;
+  	position: relative;
+	left: 85%;
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #b4ad9e;
+}
+
+.share .fab {
+	color: #b4ad9e;
+	font-size: 18px;
+}
+
+.connected {
+  	display: flex;
+  	align-items: center;
+  	padding: 38px 0 95px 0px;
+  	position: relative;
+	left: 72%;
+	font-size: 15px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #b4ad9e;
+}
+
+.connected p {
+	margin-right: 10px;
+}
+
+.connected .fab {
+	font-size: 18px;
+}
+
+.connected .fa-twitter {
+	color: #cbcbcb;
+}
+
+.connected .fa-facebook {
+	color: #606060;
+}
