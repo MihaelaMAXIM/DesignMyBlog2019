@@ -42,6 +42,15 @@
 							</div>
 						</div>
 
+						<div class="container">
+					<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+						<aside role="complementary">
+							<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						</aside>
+					<?php endif; ?>
+					</div>
+	
+
 							<?php
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
@@ -63,9 +72,8 @@
 					</div>
 
 					<div class="sidebar">
-
 						<?php get_sidebar(); ?>
-					</div>
+				</div>
 					
 				</div>
 
@@ -73,10 +81,6 @@
 
 			echo '</div>'; ?>
 
-			<div class="container">
-						<?php get_sidebar('sidebar-2'); ?>
-					</div>
-	
 		<?php
 
 		else:

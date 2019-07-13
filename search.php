@@ -1,7 +1,11 @@
+<?php get_header(); ?>
 
-<?php get_header(); 
+<div id="primary" class="container content-area">
+	<main id="main" class="site-main row" role="main">
+		<?php
 
-	if ( have_posts() ) :
+		$i=0;
+				if ( have_posts() ) :
 
 		    echo '<div class="post-wrapper"><div class="container">';
 
@@ -94,23 +98,11 @@
 			echo '</div></div>';
 
 		else :
-			echo 'nu avem posturi';
+			echo _e( 'There are no articles to show', 'designmyblog' );
 
 		endif;
-		
 	?>
+	</main>
+</div>
 
-	<?php
-	global $wp_query;
-
-	if ( $wp_query->max_num_pages > 1 )
-		echo '<div class="container">
-				<div class="button-load_more">
-			<button class="btn_loadmore">Load more</button>
-				</div>
-			</div>'
-	?>
-	
-
-	<?php get_footer(); ?>
-
+<?php get_footer(); ?>

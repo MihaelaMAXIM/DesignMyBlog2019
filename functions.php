@@ -34,6 +34,7 @@ if ( ! function_exists( 'designmyblog_scripts' ) ) :
 		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), false, 'all');
 		wp_enqueue_style('style-footer', get_stylesheet_directory_uri() . '/style-footer.css', array(), false, 'all');
 		wp_enqueue_style('style-header', get_stylesheet_directory_uri() . '/style-header.css', array(), false, 'all');
+		wp_enqueue_style( 'media-style', get_stylesheet_directory_uri() . '/media-style.css', array(), false, 'all');
 	}
 
 	add_action( 'wp_enqueue_scripts', 'designmyblog_scripts');
