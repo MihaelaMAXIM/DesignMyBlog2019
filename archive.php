@@ -44,25 +44,7 @@
 
 			} else if ($i == 5) { ?>
 
-				
-				<form action="action_page.php">
-					<div class="full-container">
-					<div class="newsletter">
-						<p>Sign up for our newsletter!</p>
-					
-			
-					<div class="enter-email">
-						<input type="text" placeholder="Enter a valid email adress" name="name" required>
-						<input type="submit-news">
-					</div>
-				
-					
-					</div>
-					</div>
-				</form>
-
-			
-				
+						
                 	<?php
                 } else {
 				?>

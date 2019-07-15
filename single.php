@@ -31,24 +31,14 @@
 								<?php the_content(); ?>
 							</div>
 
-						<div class="principal-post">
-							<div class="share">
-								<p>SHARE</p>
-								<a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
-								<a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
-								<a href="https://aboutme.google.com"><i class="fab fa-google-plus"></i></a>
-								<a href="http://tumblr.com"><i class="fab fa-tumblr"></i></a>
-								<a href="http://pinterest.com"><i class="fab fa-pinterest"></i></a>
-							</div>
-						</div>
 
-						<div class="container">
+					<div class="container">
 					<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 						<aside role="complementary">
 							<?php dynamic_sidebar( 'sidebar-2' ); ?>
 						</aside>
 					<?php endif; ?>
-					</div>
+					</div> 
 	
 
 							<?php
@@ -72,10 +62,12 @@
 					</div>
 
 					<div class="sidebar">
-						<?php get_sidebar(); ?>
-				</div>
-					
-				</div>
+						<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+						<aside role="complementary">
+							<?php dynamic_sidebar( 'sidebar-1' ); ?>
+						</aside>
+					<?php endif; ?>
+					</div>
 
 		<?php
 

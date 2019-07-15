@@ -15,15 +15,16 @@ jQuery(function($) {
 			beforeSend: function ( xhr ) {
 				button.text('Load more');
 			},
-			succes: function( data ){
-				console.log('Trimite datele');
-
+			success: function( data ) {
+				console.log(data);
 				if( data ) {
 					button.text( 'Load more' ).prev().before(data);
 					btn_loadmore_params.current_page++;
 
 					if ( btn_loadmore_params.current_page == btn_loadmore_params.max_page )
 							button.remove();
+					var $items = $( data ); // data is the HTML of loaded posts
+					$('.post-wrapper .container').append($items);
 				} else {
 					button.remove();
 				}

@@ -64,6 +64,18 @@ function designmyblog_widgets_init() {
 			'after_title'   => '</h3>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Newsletter', 'DesignMyBlog' ),
+			'id'            => 'sidebar-3',
+			'description'   => __( 'Subscribe on newsletter.', 'DesignMyBlog' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 	
 }
 add_action( 'widgets_init', 'designmyblog_widgets_init' );
@@ -77,7 +89,7 @@ function btn_loadmore_scripts() {
 	wp_register_script( 'btn_loadmore', get_stylesheet_directory_uri() . '/btn_loadmore.js', array('jquery') );
 
 	wp_localize_script( 'btn_loadmore', 'btn_loadmore_params', array(
-			'ajaxurl' => esc_url( admin_url('admin-ajax.php') ),
+			'ajaxurl' => admin_url() . 'admin-ajax.php',
 			'posts' => json_encode( $wp_query->query_vars ),
 			'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
 			'max_page' => $wp_query->max_num_pages
@@ -95,6 +107,8 @@ function btn_loadmore_ajax_handler(){
 	$args = json_decode( stripslashes( $_POST['query'] ), true );
 	$args['paged'] = $_POST['page'] + 1; 
 	$args['post_status'] = 'publish';
+	$args['post__not_in'] = get_option("sticky_posts");
+	$args['posts_per_page'] = 6;
  
 	query_posts( $args );
  
@@ -102,7 +116,7 @@ function btn_loadmore_ajax_handler(){
  
 		while( have_posts() ): the_post();
  
-			get_template_part( 'template-parts/post/content', get_post_format() );
+			get_template_part( 'template-post', get_post_format() );
  
 		endwhile;
  
@@ -124,7 +138,15 @@ add_action('wp_ajax_nopriv_btn_loadmore', 'btn_loadmore_ajax_handler');
     
     return $fields;
  }
+
+
 add_filter( 'comment_form_defaults', 'placeholder_comment_form_field' );
 
+function example_order_comment_form_fields( $fields ) {
 
+  	// Move comment field last.
+	$fields['comment'] = array_shift( $fields );
 
+  return $fields;
+
+}

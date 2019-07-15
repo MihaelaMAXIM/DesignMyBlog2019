@@ -1,5 +1,9 @@
 
-<?php get_header(); 
+<?php 
+global $wp_query;
+
+
+get_header(); 
 
 	if ( have_posts() ) :
 
@@ -14,8 +18,10 @@
 
                 	<div class="post-item post-item-first">
 						<div class="image">
-						    <?php the_post_thumbnail(get_the_ID(), 'cover-post'); ?>
-						</div>
+						<a href="<?php the_permalink(); ?>">
+					        <?php the_post_thumbnail(); ?>
+					    </a>
+					</div>
 
 						<div class="pagina">
 							<div class="category">
@@ -41,32 +47,26 @@
 
 			} else if ($i == 5) { ?>
 
-				
-				<form action="action_page.php">
 					<div class="full-container">
-					<div class="newsletter">
-						<p>Sign up for our newsletter!</p>
-					
-			
-					<div class="enter-email">
-						<input type="text" placeholder="Enter a valid email adress" name="name" required>
-						<input type="submit-news">
+						<div class="newsletter">
+							<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+								<aside role="complementary">
+									<?php dynamic_sidebar( 'sidebar-3' ); ?>
+								</aside>
+							<?php endif; ?>
+					</div>
 					</div>
 				
-					
-					</div>
-					</div>
-				</form>
 
-			
-				
                 	<?php
                 } else {
-				?>
+             ?>
 
 				<div class="post-item">
 					<div class="image">
-					    <?php the_post_thumbnail(); ?>
+						<a href="<?php the_permalink(); ?>">
+					        <?php the_post_thumbnail(); ?>
+					    </a>
 					</div>
 
 					<div class="pagina2">
@@ -98,12 +98,8 @@
 
 		endif;
 		
-	?>
 
-	<?php
-	global $wp_query;
-
-	if ( $wp_query->max_num_pages > 1 )
+	if ( $wp_query->max_num_pages > 1)
 		echo '<div class="container">
 				<div class="button-load_more">
 			<button class="btn_loadmore">Load more</button>
