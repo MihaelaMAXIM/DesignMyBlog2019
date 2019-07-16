@@ -52,6 +52,7 @@
 	text-decoration: none;
 }
 
+.post,
 .post p {
 	font-family: 'Playfair Display', serif;
 	font-size: 14px;

@@ -70,7 +70,7 @@
 						</div>
 
 						<div class="post">
-							<?php the_excerpt(); ?>
+							<?php echo mb_strimwidth( get_the_excerpt(), 0, 300, ' ...' ); ?>
 						</div>
 					</div>
 				</div>

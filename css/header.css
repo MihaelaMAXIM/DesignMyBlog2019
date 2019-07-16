@@ -118,7 +118,7 @@ nav ul li a {
   .menu-menu-1-container
   {
     position: absolute;
-    width: 300px;
+    width: 100%;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -128,6 +128,11 @@ nav ul li a {
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  .menu-menu-1-container.active
+  {
+    transform: translate(0);
   }
 
   .menu-menu-1-container li

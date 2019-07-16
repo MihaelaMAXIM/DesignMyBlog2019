@@ -17,6 +17,18 @@
 		
 	<?php wp_footer(); ?>
 	
+	<script>
+	jQuery(function($) {
+		$(document).on('click', '.hamburger', function() {
+			if (! $('.menu-menu-1-container').hasClass('active')) {
+				$('.menu-menu-1-container').addClass('active');
+			} else {
+				$('.menu-menu-1-container').removeClass('active');
+			}
+		});
+	});
+	</script>
+	
 	</body>
 	
 </html>

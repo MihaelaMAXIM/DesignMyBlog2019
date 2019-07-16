@@ -16,7 +16,6 @@ jQuery(function($) {
 				button.text('Load more');
 			},
 			success: function( data ) {
-				console.log(data);
 				if( data ) {
 					button.text( 'Load more' ).prev().before(data);
 					btn_loadmore_params.current_page++;

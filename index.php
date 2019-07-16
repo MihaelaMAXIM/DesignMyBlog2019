@@ -65,7 +65,7 @@ get_header();
 				<div class="post-item">
 					<div class="image">
 						<a href="<?php the_permalink(); ?>">
-					        <?php the_post_thumbnail(); ?>
+					        <?php the_post_thumbnail('feature-image'); ?>
 					    </a>
 					</div>
 
@@ -81,7 +81,7 @@ get_header();
 						</div>
 
 						<div class="post">
-							<?php the_excerpt(); ?>
+							<?php echo mb_strimwidth( get_the_excerpt(), 0, 450, ' ...' ); ?>
 						</div>
 					</div>
 				</div>
