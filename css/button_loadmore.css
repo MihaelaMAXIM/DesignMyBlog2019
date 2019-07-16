@@ -1,0 +1,16 @@
+.btn_loadmore {
+	position: relative;
+	width: 165px;
+	height: 65px;
+	background-color: white;
+	border: 1px solid #626262;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	color: #707070;
+	left: 42%;
+	text-decoration: none;
+	padding: 20px 30px;
+	margin: 160 0 1235px 0;
+}

@@ -1,0 +1,45 @@
+.error-404 {
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+	color: #7d7d7d;
+}
+.error-404 h1 {
+	font-size: 120px;
+	margin-bottom: 0;
+	color: #b4b39f;
+}
+.error-404 p {
+	font-size: 40px;
+	padding-bottom: 30px;
+}
+
+.searchform {
+	padding-bottom: 100px;
+}
+
+.screen-reader-text {
+	color: #b4b39f;
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.searchform input[type="text"] {
+	background-color: white;
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	color: #7d7d7d;
+}
+
+#searchsubmit {
+	width: 100px;
+	height: 45px;
+	background-color: white;
+	border: 1px solid #c8c8c8;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	color: #b4b39f;
+	margin-left: 10px;
+}

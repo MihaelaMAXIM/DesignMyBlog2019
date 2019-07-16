@@ -3,12 +3,13 @@
 <div id="primary" class="container content-area">
 	<main id="main" class="site-main-row" role="main">
 		<?php
-		$i=0;
-		if ( have_posts() ) :
+			$i=0;
+			if ( have_posts() ) :
 
-		    echo '<div class="post-wrapper"><div class="container">';
+		    	echo '<div class="post-wrapper"><div class="container">';
 
 		    $i = 0;
+
 			while ( have_posts() ) : 
 				the_post(); 
                 
@@ -26,9 +27,9 @@
 							</div>
 							
 							<div class="title-post">
-							<a href="<?php the_permalink(); ?>">
+								<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
-						    </a>
+						    	</a>
 							</div>
 
 							<div class="post">
@@ -42,17 +43,20 @@
 
 				<?php
 
-			} else if ($i == 5) { ?>
+			} 
 
-						
+			else if ($i == 5) { ?>
+	
                 	<?php
+
                 } else {
+
 				?>
 
 				<div class="post-item">
-					<div class="image">
+						<div class="image">
 					    <?php the_post_thumbnail(); ?>
-					</div>
+						</div>
 
 					<div class="pagina2">
 						<div class="category">
@@ -79,7 +83,7 @@
 			echo '</div></div>';
 
 		else :
-			echo _e( 'There are no articles to show', 'designmyblog' );
+			echo _e( 'There are no articles to show. Sorry.', 'designmyblog' );
 
 		endif;
 	?>

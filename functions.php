@@ -21,7 +21,7 @@ if ( ! function_exists ( 'designmyblog_setup' ) ) :
 	}
 
 	add_action( 'after_setup_theme', 'designmyblog_setup' );
-endif;
+	endif;
 
 if ( ! function_exists( 'designmyblog_scripts' ) ) :
 	function designmyblog_scripts() {
@@ -32,9 +32,7 @@ if ( ! function_exists( 'designmyblog_scripts' ) ) :
 		wp_enqueue_style ( 'font_awesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', array(), false, 'all');
 		wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/reset.css', array(), false, 'all');
 		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), false, 'all');
-		wp_enqueue_style('style-footer', get_stylesheet_directory_uri() . '/style-footer.css', array(), false, 'all');
-		wp_enqueue_style('style-header', get_stylesheet_directory_uri() . '/style-header.css', array(), false, 'all');
-		wp_enqueue_style( 'media-style', get_stylesheet_directory_uri() . '/media-style.css', array(), false, 'all');
+		wp_enqueue_script( 'btn_loadmore-js', get_stylesheet_directory_uri() . '/js/btn_loadmore.js', array( 'jquery' ), false, true );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'designmyblog_scripts');

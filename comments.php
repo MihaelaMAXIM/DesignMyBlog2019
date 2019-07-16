@@ -1,11 +1,11 @@
 <?php
 
-if ( post_password_required() ) {
-	return;
-}
+	if ( post_password_required() ) {
+		return;
+	}
 ?>
 
-<div id="comments" class="comments-area">
+	<div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -46,16 +46,14 @@ if ( post_password_required() ) {
 		</ol>
 		<?php the_comments_navigation(); ?>
 
-	<?php endif;  ?>
-
-	<?php
+	<?php endif;  
 		
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 	<p class="no-comments"><?php _e( 'Comments are closed.', 'designmyblog' ); ?></p>
-	<?php endif; ?>
+	<?php endif; 
 
-	<?php
+	
 		comment_form(
 			array(
 				'title_reply_before' => '',
