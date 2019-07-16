@@ -13,6 +13,9 @@
 			</div>
 			
 			<div class="hamburger"> 
+				<input type="checkbox">
+				<span></span>
+				<span></span>
 				<span></span>
 			</div>
 

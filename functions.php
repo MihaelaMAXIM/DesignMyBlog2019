@@ -142,11 +142,12 @@ add_action('wp_ajax_nopriv_btn_loadmore', 'btn_loadmore_ajax_handler');
 
 add_filter( 'comment_form_defaults', 'placeholder_comment_form_field' );
 
+
 function example_order_comment_form_fields( $fields ) {
 
-  	// Move comment field last.
 	$fields['comment'] = array_shift( $fields );
 
   return $fields;
-
 }
+
+add_filter( 'comment_form_fields', 'example_order_comment_form_fields' );

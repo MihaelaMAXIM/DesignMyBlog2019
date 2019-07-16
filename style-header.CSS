@@ -54,53 +54,7 @@ nav ul li a {
 }
 
 @media screen and (max-width:768px) {
-   .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 20px;
-    position: relative;
-    margin-right: 30px;
-  }
-
-  .hamburger span {
-    width: 100%;
-    height: 4px;
-    background-color: #626262;
-    display: block;
-  }
-
-  .hamburger:before, .hamburger:after {
-    width: 100%;
-    height: 4px;
-    background-color: #626262;
-    display: block;
-    position: absolute;
-    left: 0;
-    content: "";
-  }
-
-  .hamburger:before {
-    top: 0;
-  }
-
-  .hamburger:after {
-    bottom: 0;
-  }
-
-  .menu-menu-1-container {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    width: 100%;
-    transform: translateY(-100%);
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out;;
-  }
-
+  
   nav ul {
     width: 100%;
     margin: 15px 0 0;
@@ -113,7 +67,6 @@ nav ul li a {
 
   nav ul li a {
    color: white;
-   padding: 0 0 15px;
    text-align: left;
 }
 
@@ -123,4 +76,65 @@ nav ul li a {
     transform: translateY(0);
   }
 
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
+
+  .hamburger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+  .hamburger  span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+.menu-menu-1-container
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #232323;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menu-menu-1-container li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+}
+
