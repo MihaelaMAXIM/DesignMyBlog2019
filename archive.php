@@ -55,7 +55,7 @@
 
 				<div class="post-item">
 						<div class="image">
-					    <?php the_post_thumbnail(); ?>
+					    <?php the_post_thumbnail('feature-image'); ?>
 						</div>
 
 					<div class="pagina2">

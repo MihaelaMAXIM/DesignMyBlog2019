@@ -2,16 +2,9 @@
 
 if ( ! function_exists ( 'designmyblog_setup' ) ) :
 	function designmyblog_setup() {
-		// add support for featured image
-		add_theme_support( 'post-thumbnails');
+		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'cover-image', 1063, 511);
-
-		add_image_size( 'post-image', 660, 495);
-
-		add_image_size( 'cover-post', 420, 280);
-
-		add_image_size( 'feature-image', 421, 206);
+		add_image_size( 'feature-image', 421, 280, true );
 
 		add_theme_support( 'title-tag' );
 
