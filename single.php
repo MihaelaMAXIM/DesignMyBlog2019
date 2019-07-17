@@ -40,11 +40,13 @@
 					<?php endif; ?>
 					</div> 
 	
-
+					
+					<div class="container">
 							<?php
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					} ?>
+				</div>
 
 					<div class="container">
 							<div class="connected">

@@ -13,7 +13,7 @@
 				$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				
-				printf( _x( '2 COMMENTS', 'comments title', 'designmyblog' ), get_the_title() );
+				printf( _x( '1 COMMENT', 'comments title', 'designmyblog' ), get_the_title() );
 			} else {
 				printf(
 			

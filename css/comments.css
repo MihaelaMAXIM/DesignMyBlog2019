@@ -70,6 +70,7 @@
 
 .photo {
 	width: 75px;
+	height: 75px;
 	border-radius: 50%;
 }
 
@@ -79,6 +80,12 @@
 	color: #636363;
 	font-weight: 700;
 }
+
+.fn a,
+	.fn a:hover {
+		text-decoration: none;
+		color: #636363;
+	}
 
 .comment-author {
 	margin-bottom: 13px;
@@ -112,6 +119,7 @@
 	font-family: 'Playfair Display', serif;
 	font-size: 16px;
 	color: #616161;
+	line-height: 30px;
 }
 
 .reply {
@@ -136,15 +144,23 @@
 	text-decoration: none
 }
 
-.comment-respond form {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 #cancel-comment-reply-link {
 	display: none;
 }
 
+.comment-respond {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment-form-author {
+	flex: 0 0 100%;
+}
 
 .reply a{
 	font-family: 'Ubuntu', sans-serif;
