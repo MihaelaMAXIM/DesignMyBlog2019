@@ -162,6 +162,10 @@
 	flex: 0 0 100%;
 }
 
+.comments-area {
+	width: 960px;
+}
+
 .reply a{
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
