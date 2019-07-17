@@ -158,7 +158,8 @@
 	flex-wrap: wrap;
 }
 
-.comment-form-author {
+.comment-form-author,
+.comment-form-url {
 	flex: 0 0 100%;
 }
 
